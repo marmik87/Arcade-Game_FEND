@@ -1,0 +1,12 @@
+body {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.wrapper {
+  display: grid;
+  margin: auto;
+  width: 505px;
+  margin-top: 50px;
+  grid-template-columns: 150px 150px 150px;
+}
