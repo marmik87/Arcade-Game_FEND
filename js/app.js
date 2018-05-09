@@ -37,9 +37,9 @@ var Player = function() {
 
 Player.prototype.update = function(dt) {
   //player wins the game - reaches the water, starts back at the bottom and the counter for wins is incremented
-  if (player.y == -40) {
-    player.x = 200;
-    player.y = 375;
+  if (this.y == -40) {
+    this.x = 200;
+    this.y = 375;
     document.getElementById('wins').textContent = ++game.wins;
   }
 };
@@ -54,7 +54,7 @@ Player.prototype.handleInput = function(keyCode) {
   switch (keyCode) {
     case 'left':
       if (this.x >= 100) {
-        this.x -= 100;
+        this.x -= 101;
       }
       break;
     case 'up':
@@ -64,7 +64,7 @@ Player.prototype.handleInput = function(keyCode) {
       break;
     case 'right':
       if (this.x < 400) {
-        this.x += 100;
+        this.x += 101;
       }
       break;
     case 'down':
